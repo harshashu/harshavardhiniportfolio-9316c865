@@ -30,7 +30,7 @@ const stats = [
 ];
 
 const projects = [
-  { title: "Emergency Response System", tag: "UX Case Study · Mobile · 2025", image: sosCover, detail: sosDetail },
+  { title: "SOS APP DESIGN", tag: "UX Case Study · Mobile · 2025", image: sosCover, href: sosDetail },
   { title: "Lumen Analytics Dashboard", tag: "Web · Product · 2025", image: project2 },
   { title: "Maison Rose Branding", tag: "Identity · Print · 2024", image: project3 },
   { title: "Wander Travel App", tag: "Mobile · UX/UI · 2024", image: project4 },
