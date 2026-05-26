@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
-import { ArrowUpRight, Instagram, Linkedin, Dribbble, X } from "lucide-react";
+import { ArrowUpRight, Instagram, Linkedin, Dribbble } from "lucide-react";
 import portrait from "@/assets/portrait.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -31,26 +30,13 @@ const stats = [
 ];
 
 const projects = [
-  { title: "Emergency Response System", tag: "UX Case Study · Mobile · 2025", image: sosCover, detail: sosDetail },
+  { title: "SOS APP DESIGN", tag: "UX Case Study · Mobile · 2025", image: sosCover, href: sosDetail },
   { title: "Lumen Analytics Dashboard", tag: "Web · Product · 2025", image: project2 },
   { title: "Maison Rose Branding", tag: "Identity · Print · 2024", image: project3 },
   { title: "Wander Travel App", tag: "Mobile · UX/UI · 2024", image: project4 },
 ];
 
 function Index() {
-  const [openProject, setOpenProject] = useState<null | { title: string; image: string }>(null);
-
-  useEffect(() => {
-    if (!openProject) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpenProject(null);
-    window.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [openProject]);
-
   return (
     <div className="bg-brand-bg text-brand-ink font-body selection:bg-brand-accent selection:text-white overflow-x-hidden">
       {/* Nav */}
@@ -181,33 +167,38 @@ function Index() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((p) => (
-            <article
-              key={p.title}
-              onClick={() => p.detail && setOpenProject({ title: p.title, image: p.detail })}
-              className={`group bg-white rounded-3xl p-4 shadow-sm hover:shadow-xl transition-all ${p.detail ? "cursor-pointer" : ""}`}
-            >
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-muted mb-5">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  width={900}
-                  height={1000}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="flex items-start justify-between gap-4 px-2 pb-3">
-                <div>
-                  <div className="text-[11px] font-bold uppercase tracking-widest text-brand-ink/50 mb-2">{p.tag}</div>
-                  <h3 className="font-display text-xl md:text-2xl uppercase tracking-tight">{p.title}</h3>
+          {projects.map((p) => {
+            const Card = (
+              <article className="group bg-white rounded-3xl p-4 shadow-sm hover:shadow-xl transition-all">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-muted mb-5">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    width={900}
+                    height={1000}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
-                <div className="shrink-0 w-11 h-11 rounded-full bg-brand-ink text-white flex items-center justify-center group-hover:bg-brand-accent transition-colors">
-                  <ArrowUpRight className="w-5 h-5" />
+                <div className="flex items-start justify-between gap-4 px-2 pb-3">
+                  <div>
+                    <div className="text-[11px] font-bold uppercase tracking-widest text-brand-ink/50 mb-2">{p.tag}</div>
+                    <h3 className="font-display text-xl md:text-2xl uppercase tracking-tight">{p.title}</h3>
+                  </div>
+                  <div className="shrink-0 w-11 h-11 rounded-full bg-brand-ink text-white flex items-center justify-center group-hover:bg-brand-accent transition-colors">
+                    <ArrowUpRight className="w-5 h-5" />
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+            return p.href ? (
+              <a key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className="block">
+                {Card}
+              </a>
+            ) : (
+              <div key={p.title}>{Card}</div>
+            );
+          })}
         </div>
       </section>
 
@@ -222,11 +213,11 @@ function Index() {
           Have a project idea or looking for a creative UI/UX Designer? Let's connect and create something impactful together.
         </p>
         <a
-          href="mailto:harsha@example.com"
+          href="mailto:harshavardhaniboodu@gmail.com"
           className="inline-flex items-center gap-3 bg-brand-ink text-white px-8 py-4 rounded-full text-base md:text-lg font-medium hover:bg-brand-accent transition-colors"
         >
           <span className="w-2 h-2 rounded-full bg-brand-accent-soft" />
-          harsha@example.com
+          harshavardhaniboodu@gmail.com
         </a>
 
         <div className="flex justify-center gap-5 mt-12">
@@ -247,31 +238,6 @@ function Index() {
         <div>© 2026 Harsha Vardhini. Designed with care.</div>
       </footer>
 
-      {/* Project lightbox */}
-      {openProject && (
-        <div
-          onClick={() => setOpenProject(null)}
-          className="fixed inset-0 z-50 bg-brand-ink/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 animate-in fade-in"
-        >
-          <button
-            onClick={() => setOpenProject(null)}
-            aria-label="Close"
-            className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white text-brand-ink flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="relative max-w-6xl w-full max-h-[90vh] overflow-auto rounded-2xl bg-white shadow-2xl"
-          >
-            <img
-              src={openProject.image}
-              alt={openProject.title}
-              className="w-full h-auto block"
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 }
