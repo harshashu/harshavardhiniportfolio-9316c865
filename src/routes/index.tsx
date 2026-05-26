@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, useEffect } from "react";
-import { ArrowUpRight, Instagram, Linkedin, Dribbble, X } from "lucide-react";
+import { ArrowUpRight, Instagram, Linkedin, Dribbble } from "lucide-react";
 import portrait from "@/assets/portrait.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
