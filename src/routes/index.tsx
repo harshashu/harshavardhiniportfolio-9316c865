@@ -85,24 +85,20 @@ function Index() {
           </div>
         </div>
 
-        {/* Portrait card */}
-        <div className="relative mx-auto w-full max-w-md aspect-[4/5]">
-          {/* purple offset frame */}
-          <div className="absolute inset-0 rounded-3xl bg-brand-accent-soft rotate-3" />
-          {/* image */}
-          <div className="absolute inset-0 rounded-3xl overflow-hidden -rotate-1 shadow-xl">
-            <img
-              src={portrait}
-              alt="Harsha Vardhini, UI/UX Designer"
-              width={1000}
-              height={1200}
-              className="w-full h-full object-cover"
-            />
-          </div>
+        {/* Portrait */}
+        <div className="relative mx-auto w-40 h-40 md:w-48 md:h-48 flex items-center justify-center">
+          <div className="absolute inset-0 rounded-full bg-brand-accent-soft scale-110" />
+          <img
+            src={portrait}
+            alt="Harsha Vardhini, UI/UX Designer"
+            width={400}
+            height={400}
+            className="relative w-full h-full rounded-full object-cover border-4 border-white shadow-xl"
+          />
           {/* UX/UI badge */}
-          <div className="absolute -top-4 -right-2 bg-brand-accent text-white rounded-2xl px-4 py-3 shadow-lg rotate-6">
-            <div className="font-display text-sm leading-none">UX · UI</div>
-            <div className="text-[10px] mt-1 font-medium opacity-90">Designer</div>
+          <div className="absolute -top-2 -right-2 bg-brand-accent text-white rounded-xl px-3 py-2 shadow-lg rotate-6">
+            <div className="font-display text-xs leading-none">UX · UI</div>
+            <div className="text-[9px] mt-0.5 font-medium opacity-90">Designer</div>
           </div>
         </div>
       </header>
