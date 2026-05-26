@@ -6,6 +6,8 @@ import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import sosCover from "@/assets/project-sos-cover.png";
 import sosDetail from "@/assets/project-sos-detail.jpeg";
+import lumenCover from "@/assets/lumen-cover.png";
+import lumenDetail from "@/assets/lumen-detail.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -26,7 +28,7 @@ const stats = [];
 
 const projects = [
   { title: "SOS APP DESIGN", tag: "UX Case Study · Mobile · 2025", image: sosCover, href: sosDetail },
-  { title: "Lumen Analytics Dashboard", tag: "Web · Product · 2025", image: project2 },
+  { title: "Lumen", tag: "Poster · Branding · 2025", image: lumenCover, href: lumenDetail },
   { title: "Maison Rose Branding", tag: "Identity · Print · 2024", image: project3 },
   { title: "Wander Travel App", tag: "Mobile · UX/UI · 2024", image: project4 },
 ];
