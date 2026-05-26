@@ -213,11 +213,11 @@ function Index() {
           Have a project idea or looking for a creative UI/UX Designer? Let's connect and create something impactful together.
         </p>
         <a
-          href="mailto:harsha@example.com"
+          href="mailto:harshavardhaniboodu@gmail.com"
           className="inline-flex items-center gap-3 bg-brand-ink text-white px-8 py-4 rounded-full text-base md:text-lg font-medium hover:bg-brand-accent transition-colors"
         >
           <span className="w-2 h-2 rounded-full bg-brand-accent-soft" />
-          harsha@example.com
+          harshavardhaniboodu@gmail.com
         </a>
 
         <div className="flex justify-center gap-5 mt-12">
@@ -238,31 +238,6 @@ function Index() {
         <div>© 2026 Harsha Vardhini. Designed with care.</div>
       </footer>
 
-      {/* Project lightbox */}
-      {openProject && (
-        <div
-          onClick={() => setOpenProject(null)}
-          className="fixed inset-0 z-50 bg-brand-ink/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 animate-in fade-in"
-        >
-          <button
-            onClick={() => setOpenProject(null)}
-            aria-label="Close"
-            className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white text-brand-ink flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="relative max-w-6xl w-full max-h-[90vh] overflow-auto rounded-2xl bg-white shadow-2xl"
-          >
-            <img
-              src={openProject.image}
-              alt={openProject.title}
-              className="w-full h-auto block"
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
 }
