@@ -1,10 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Instagram, Linkedin, Dribbble } from "lucide-react";
+import { useState, useEffect } from "react";
+import { ArrowUpRight, Instagram, Linkedin, Dribbble, X } from "lucide-react";
 import portrait from "@/assets/portrait.jpg";
-import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
+import sosCover from "@/assets/project-sos-cover.png";
+import sosDetail from "@/assets/project-sos-detail.jpeg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -29,13 +31,26 @@ const stats = [
 ];
 
 const projects = [
-  { title: "Figma Prototype", tag: "Interactive · Prototype · 2025", image: project1 },
+  { title: "Emergency Response System", tag: "UX Case Study · Mobile · 2025", image: sosCover, detail: sosDetail },
   { title: "Lumen Analytics Dashboard", tag: "Web · Product · 2025", image: project2 },
   { title: "Maison Rose Branding", tag: "Identity · Print · 2024", image: project3 },
   { title: "Wander Travel App", tag: "Mobile · UX/UI · 2024", image: project4 },
 ];
 
 function Index() {
+  const [openProject, setOpenProject] = useState<null | { title: string; image: string }>(null);
+
+  useEffect(() => {
+    if (!openProject) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpenProject(null);
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [openProject]);
+
   return (
     <div className="bg-brand-bg text-brand-ink font-body selection:bg-brand-accent selection:text-white overflow-x-hidden">
       {/* Nav */}
@@ -167,7 +182,11 @@ function Index() {
 
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((p) => (
-            <article key={p.title} className="group bg-white rounded-3xl p-4 shadow-sm hover:shadow-xl transition-all">
+            <article
+              key={p.title}
+              onClick={() => p.detail && setOpenProject({ title: p.title, image: p.detail })}
+              className={`group bg-white rounded-3xl p-4 shadow-sm hover:shadow-xl transition-all ${p.detail ? "cursor-pointer" : ""}`}
+            >
               <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-muted mb-5">
                 <img
                   src={p.image}
@@ -227,6 +246,32 @@ function Index() {
         <div className="font-display text-base text-brand-ink">HARSHA<span className="text-brand-accent">.</span></div>
         <div>© 2026 Harsha Vardhini. Designed with care.</div>
       </footer>
+
+      {/* Project lightbox */}
+      {openProject && (
+        <div
+          onClick={() => setOpenProject(null)}
+          className="fixed inset-0 z-50 bg-brand-ink/80 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 animate-in fade-in"
+        >
+          <button
+            onClick={() => setOpenProject(null)}
+            aria-label="Close"
+            className="absolute top-5 right-5 w-11 h-11 rounded-full bg-white text-brand-ink flex items-center justify-center hover:bg-brand-accent hover:text-white transition-colors"
+          >
+            <X className="w-5 h-5" />
+          </button>
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-6xl w-full max-h-[90vh] overflow-auto rounded-2xl bg-white shadow-2xl"
+          >
+            <img
+              src={openProject.image}
+              alt={openProject.title}
+              className="w-full h-auto block"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
