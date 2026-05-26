@@ -8,6 +8,7 @@ import sosCover from "@/assets/project-sos-cover.png";
 import sosDetail from "@/assets/project-sos-detail.jpeg";
 import lumenCover from "@/assets/lumen-cover.png";
 import lumenDetail from "@/assets/lumen-detail.png";
+import avinyaCover from "@/assets/avinya-cover.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -29,7 +30,7 @@ const stats = [];
 const projects = [
   { title: "SOS APP DESIGN", tag: "UX Case Study · Mobile · 2025", image: sosCover, href: sosDetail },
   { title: "CREAMY ICE POSTER", tag: "Poster · Branding · 2025", image: lumenCover, href: lumenDetail },
-  { title: "Maison Rose Branding", tag: "Identity · Print · 2024", image: project3 },
+  { title: "AVINYA INTERIORS", tag: "Interior Design · Branding · 2024", image: avinyaCover, href: "https://avinya-interiors.vercel.app/" },
   { title: "Wander Travel App", tag: "Mobile · UX/UI · 2024", image: project4 },
 ];
 
