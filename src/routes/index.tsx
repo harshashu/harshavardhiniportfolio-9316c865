@@ -22,12 +22,7 @@ const skills = [
   "Mobile UX",
 ];
 
-const stats = [
-  { value: "40+", label: "Projects Shipped" },
-  { value: "25+", label: "Happy Clients" },
-  { value: "5+", label: "Years Experience" },
-  { value: "12", label: "Design Awards" },
-];
+const stats = [];
 
 const projects = [
   { title: "SOS APP DESIGN", tag: "UX Case Study · Mobile · 2025", image: sosCover, href: sosDetail },
@@ -105,11 +100,6 @@ function Index() {
             <div className="font-display text-sm leading-none">UX · UI</div>
             <div className="text-[10px] mt-1 font-medium opacity-90">Designer</div>
           </div>
-          {/* years card */}
-          <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl px-5 py-3 shadow-lg">
-            <div className="font-display text-2xl leading-none">5+</div>
-            <div className="text-[10px] mt-1 font-bold uppercase tracking-widest text-brand-ink/60">Years Crafting</div>
-          </div>
         </div>
       </header>
 
@@ -143,14 +133,6 @@ function Index() {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-brand-ink/10">
-          {stats.map((s) => (
-            <div key={s.label}>
-              <div className="font-display text-4xl md:text-5xl text-brand-ink">{s.value}</div>
-              <div className="text-[11px] mt-2 font-bold uppercase tracking-widest text-brand-ink/60">{s.label}</div>
-            </div>
-          ))}
-        </div>
       </section>
 
       {/* Work */}
@@ -222,11 +204,13 @@ function Index() {
 
         <div className="flex justify-center gap-5 mt-12">
           {[Instagram, Linkedin, Dribbble].map((Icon, i) => (
-            <a
-              key={i}
-              href="#"
-              className="w-11 h-11 rounded-full border border-brand-ink/20 flex items-center justify-center hover:bg-brand-accent hover:text-white hover:border-brand-accent transition-colors"
-            >
+          <a
+            key={i}
+            href={i === 1 ? "https://www.linkedin.com/in/harshavardhiniboddu/" : "#"}
+            target={i === 1 ? "_blank" : undefined}
+            rel={i === 1 ? "noopener noreferrer" : undefined}
+            className="w-11 h-11 rounded-full border border-brand-ink/20 flex items-center justify-center hover:bg-brand-accent hover:text-white hover:border-brand-accent transition-colors"
+          >
               <Icon className="w-4 h-4" />
             </a>
           ))}
