@@ -28,7 +28,7 @@ const stats = [];
 
 const projects = [
   { title: "SOS APP DESIGN", tag: "UX Case Study · Mobile · 2025", image: sosCover, href: sosDetail },
-  { title: "Lumen", tag: "Poster · Branding · 2025", image: lumenCover, href: lumenDetail },
+  { title: "CREAMY ICE POSTER", tag: "Poster · Branding · 2025", image: lumenCover, href: lumenDetail },
   { title: "Maison Rose Branding", tag: "Identity · Print · 2024", image: project3 },
   { title: "Wander Travel App", tag: "Mobile · UX/UI · 2024", image: project4 },
 ];
