@@ -4,7 +4,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap");
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -47,22 +47,28 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-  --font-display: "Plus Jakarta Sans", sans-serif;
-  --font-body: "Outfit", sans-serif;
+  --font-display: "Archivo Black", "Archivo", sans-serif;
+  --font-body: "Inter", sans-serif;
   --color-brand-bg: var(--brand-bg);
   --color-brand-ink: var(--brand-ink);
   --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-soft: var(--brand-accent-soft);
   --color-brand-muted: var(--brand-muted);
+  --color-brand-card: var(--brand-card);
+  --color-brand-peach: var(--brand-peach);
 }
 
 :root {
   --radius: 0.625rem;
-  --brand-bg: #fcfbf9;
-  --brand-ink: #141413;
-  --brand-accent: #3e3e32;
-  --brand-muted: #e8e7e3;
-  --background: oklch(0.985 0.005 90);
-  --foreground: oklch(0.18 0.005 90);
+  --brand-bg: #fbeef5;
+  --brand-ink: #1a1326;
+  --brand-accent: #a855f7;
+  --brand-accent-soft: #d6b4fc;
+  --brand-muted: #f3e0ec;
+  --brand-card: #ffffff;
+  --brand-peach: #f4b8a8;
+  --background: oklch(0.97 0.02 340);
+  --foreground: oklch(0.18 0.03 290);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
@@ -141,4 +147,12 @@
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
   }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 35s linear infinite;
 }
