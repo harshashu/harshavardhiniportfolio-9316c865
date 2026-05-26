@@ -37,19 +37,6 @@ const projects = [
 ];
 
 function Index() {
-  const [openProject, setOpenProject] = useState<null | { title: string; image: string }>(null);
-
-  useEffect(() => {
-    if (!openProject) return;
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpenProject(null);
-    window.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
-    return () => {
-      window.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [openProject]);
-
   return (
     <div className="bg-brand-bg text-brand-ink font-body selection:bg-brand-accent selection:text-white overflow-x-hidden">
       {/* Nav */}
