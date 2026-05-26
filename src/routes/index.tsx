@@ -167,33 +167,38 @@ function Index() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((p) => (
-            <article
-              key={p.title}
-              onClick={() => p.detail && setOpenProject({ title: p.title, image: p.detail })}
-              className={`group bg-white rounded-3xl p-4 shadow-sm hover:shadow-xl transition-all ${p.detail ? "cursor-pointer" : ""}`}
-            >
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-muted mb-5">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  width={900}
-                  height={1000}
-                  loading="lazy"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="flex items-start justify-between gap-4 px-2 pb-3">
-                <div>
-                  <div className="text-[11px] font-bold uppercase tracking-widest text-brand-ink/50 mb-2">{p.tag}</div>
-                  <h3 className="font-display text-xl md:text-2xl uppercase tracking-tight">{p.title}</h3>
+          {projects.map((p) => {
+            const Card = (
+              <article className="group bg-white rounded-3xl p-4 shadow-sm hover:shadow-xl transition-all">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-brand-muted mb-5">
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    width={900}
+                    height={1000}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
                 </div>
-                <div className="shrink-0 w-11 h-11 rounded-full bg-brand-ink text-white flex items-center justify-center group-hover:bg-brand-accent transition-colors">
-                  <ArrowUpRight className="w-5 h-5" />
+                <div className="flex items-start justify-between gap-4 px-2 pb-3">
+                  <div>
+                    <div className="text-[11px] font-bold uppercase tracking-widest text-brand-ink/50 mb-2">{p.tag}</div>
+                    <h3 className="font-display text-xl md:text-2xl uppercase tracking-tight">{p.title}</h3>
+                  </div>
+                  <div className="shrink-0 w-11 h-11 rounded-full bg-brand-ink text-white flex items-center justify-center group-hover:bg-brand-accent transition-colors">
+                    <ArrowUpRight className="w-5 h-5" />
+                  </div>
                 </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+            return p.href ? (
+              <a key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className="block">
+                {Card}
+              </a>
+            ) : (
+              <div key={p.title}>{Card}</div>
+            );
+          })}
         </div>
       </section>
 
