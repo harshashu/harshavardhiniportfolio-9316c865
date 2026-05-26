@@ -76,10 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "description", content: "Portfolio of Harsha Vardhini, a UI/UX designer crafting clean, intuitive, and visually engaging digital experiences." },
       { name: "author", content: "Harsha Vardhini" },
       { property: "og:title", content: "Harsha Vardhini — UI/UX Designer" },
-      { property: "og:description", content: "Designing digital experiences that feel effortless and inspire action." },
+      { property: "og:description", content: "Portfolio of Harsha Vardhini, a UI/UX designer crafting clean, intuitive, and visually engaging digital experiences." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Harsha Vardhini — UI/UX Designer" },
+      { name: "twitter:description", content: "Portfolio of Harsha Vardhini, a UI/UX designer crafting clean, intuitive, and visually engaging digital experiences." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/733fd790-de1b-4703-bd0d-a39bd67d85e3/id-preview-30784575--11608737-e5d9-4b07-abd4-dc0ef04c1afb.lovable.app-1779777205590.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/733fd790-de1b-4703-bd0d-a39bd67d85e3/id-preview-30784575--11608737-e5d9-4b07-abd4-dc0ef04c1afb.lovable.app-1779777205590.png" },
     ],
     links: [
       {
