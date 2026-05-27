@@ -61,14 +61,19 @@ function Index() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-accent" />
             Available for freelance · 2026
           </div>
-          <p className="text-base md:text-lg text-brand-ink/60 mb-2">Hi I am</p>
-          <p className="font-display text-2xl md:text-3xl text-brand-ink mb-6 tracking-tight">Harsha Vardhini</p>
+          <div className="flex items-center gap-3 mb-6">
+            <img
+              src={portrait}
+              alt="Harsha Vardhini"
+              width={40}
+              height={40}
+              className="w-10 h-10 rounded-full object-cover border-2 border-brand-accent"
+            />
+            <p className="font-display text-2xl md:text-3xl text-brand-ink tracking-tight">Harsha Vardhini</p>
+          </div>
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8 uppercase text-brand-accent">
             UI/UX <br />Designer
           </h1>
-          <p className="text-base md:text-lg text-brand-ink/70 leading-relaxed max-w-md mb-10">
-            That feel effortless &amp; inspire action. I'm <span className="font-semibold text-brand-ink">Harsha Vardhini</span>, a creative UI/UX Designer building clean, user-friendly, and visually engaging interfaces that connect users with brands.
-          </p>
           <div className="flex flex-wrap gap-3">
             <a
               href="#work"
