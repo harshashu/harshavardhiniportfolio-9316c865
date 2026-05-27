@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Instagram, Linkedin, Dribbble } from "lucide-react";
+import { ArrowUpRight, Instagram, Linkedin, Dribbble, Home, User, LayoutGrid, Layers, Mail } from "lucide-react";
 import portrait from "@/assets/portrait.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
@@ -106,6 +106,24 @@ function Index() {
             <span className="w-2 h-2 rounded-full bg-emerald-400" />
             Available for Work
           </div>
+          <nav className="w-full max-w-xs flex flex-col gap-1 mt-4">
+            {[
+              { label: "Home", icon: Home, href: "#top" },
+              { label: "About", icon: User, href: "#about" },
+              { label: "Projects", icon: LayoutGrid, href: "#work" },
+              { label: "Stack", icon: Layers, href: "#stack" },
+              { label: "Contact", icon: Mail, href: "#contact" },
+            ].map(({ label, icon: Icon, href }) => (
+              <a
+                key={label}
+                href={href}
+                className="flex items-center gap-3 px-4 py-3 rounded-xl text-brand-ink/80 hover:bg-brand-muted hover:text-brand-ink transition-colors text-sm font-medium"
+              >
+                <Icon className="w-4 h-4" />
+                {label}
+              </a>
+            ))}
+          </nav>
         </div>
       </header>
 
