@@ -61,17 +61,10 @@ function Index() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-accent" />
             Available for freelance · 2026
           </div>
-          <div className="flex items-center gap-3 mb-6">
-            <img
-              src={portrait}
-              alt="Harsha Vardhini"
-              width={40}
-              height={40}
-              className="w-10 h-10 rounded-full object-cover border-2 border-brand-accent"
-            />
+          <div className="mb-6">
             <p className="font-display text-2xl md:text-3xl text-brand-ink tracking-tight">Harsha Vardhini</p>
           </div>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8 uppercase text-brand-accent">
+          <h1 className="font-body italic font-light text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8 text-brand-ink">
             UI/UX <br />Designer
           </h1>
           <div className="flex flex-wrap gap-3">
@@ -98,9 +91,9 @@ function Index() {
         </div>
 
         {/* Portrait */}
-        <div className="flex flex-col items-center gap-5">
+        <div className="flex flex-col items-center gap-5 bg-brand-bg rounded-3xl p-5">
           <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-full bg-brand-accent" />
+            <div className="absolute inset-0 rounded-full bg-brand-bg" />
             <img
               src={portrait}
               alt="Harsha Vardhini, UI/UX Designer"
@@ -118,7 +111,7 @@ function Index() {
             <span className="w-2 h-2 rounded-full bg-emerald-400" />
             Available for Work
           </div>
-          <nav className="w-full max-w-xs flex flex-col gap-1 mt-4">
+          <nav className="w-full max-w-xs flex flex-col gap-1 mt-4 bg-brand-bg rounded-2xl p-2">
             {[
               { label: "Home", icon: Home, href: "#top" },
               { label: "About", icon: User, href: "#about" },
