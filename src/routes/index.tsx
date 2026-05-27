@@ -61,10 +61,10 @@ function Index() {
             <span className="w-1.5 h-1.5 rounded-full bg-brand-accent" />
             Available for freelance · 2026
           </div>
-          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8 uppercase">
-            Designing <br />
-            <span className="text-brand-accent">Digital</span> <br />
-            Experiences
+          <p className="text-base md:text-lg text-brand-ink/60 mb-2">Hi I am</p>
+          <p className="font-display text-2xl md:text-3xl text-brand-ink mb-6 tracking-tight">Harsha Vardhini</p>
+          <h1 className="font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight mb-8 uppercase text-brand-accent">
+            UI/UX <br />Designer
           </h1>
           <p className="text-base md:text-lg text-brand-ink/70 leading-relaxed max-w-md mb-10">
             That feel effortless &amp; inspire action. I'm <span className="font-semibold text-brand-ink">Harsha Vardhini</span>, a creative UI/UX Designer building clean, user-friendly, and visually engaging interfaces that connect users with brands.
@@ -75,6 +75,13 @@ function Index() {
               className="inline-flex items-center gap-2 bg-brand-ink text-white px-7 py-3.5 rounded-full text-sm font-medium hover:bg-brand-accent transition-colors"
             >
               View My Work <ArrowUpRight className="w-4 h-4" />
+            </a>
+            <a
+              href="/resume.pdf"
+              download
+              className="inline-flex items-center gap-2 bg-brand-accent text-white px-7 py-3.5 rounded-full text-sm font-medium hover:bg-brand-ink transition-colors"
+            >
+              Download Resume
             </a>
             <a
               href="#contact"
