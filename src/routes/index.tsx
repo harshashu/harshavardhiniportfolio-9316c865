@@ -42,7 +42,7 @@ function Index() {
       <nav className="px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
         <a href="#top" className="font-display text-xl tracking-tight">HARSHA<span className="text-brand-accent">.</span></a>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium">
-          <a href="#about" className="hover:text-brand-accent transition-colors">About</a>
+          <Link to="/about" className="hover:text-brand-accent transition-colors">About</Link>
           <a href="#work" className="hover:text-brand-accent transition-colors">Work</a>
           <a href="#contact" className="hover:text-brand-accent transition-colors">Contact</a>
         </div>
