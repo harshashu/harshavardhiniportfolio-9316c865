@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Instagram, Linkedin, Dribbble, Home, User, LayoutGrid, Layers, Mail } from "lucide-react";
 import portrait from "@/assets/portrait.jpg";
 import project2 from "@/assets/project-2.jpg";
