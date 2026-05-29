@@ -91,9 +91,9 @@ function Index() {
         </div>
 
         {/* Portrait */}
-        <div className="flex flex-col items-center gap-5 bg-brand-bg rounded-3xl p-5">
+        <div className="flex flex-col items-center gap-5 bg-brand-ink rounded-3xl p-5">
           <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
-            <div className="absolute inset-0 rounded-full bg-brand-bg" />
+            <div className="absolute inset-0 rounded-full bg-brand-ink" />
             <img
               src={portrait}
               alt="Harsha Vardhini, UI/UX Designer"
@@ -102,7 +102,7 @@ function Index() {
               className="relative w-full h-full rounded-full object-cover"
             />
             {/* UX/UI badge */}
-            <div className="absolute -top-1 -right-1 bg-brand-ink text-white rounded-xl px-3 py-2 shadow-lg rotate-6">
+            <div className="absolute -top-1 -right-1 bg-brand-accent text-white rounded-xl px-3 py-2 shadow-lg rotate-6">
               <div className="font-display text-xs leading-none">UX · UI</div>
               <div className="text-[9px] mt-0.5 font-medium opacity-90">Designer</div>
             </div>
@@ -111,7 +111,7 @@ function Index() {
             <span className="w-2 h-2 rounded-full bg-emerald-400" />
             Available for Work
           </div>
-          <nav className="w-full max-w-xs flex flex-col gap-1 mt-4 bg-brand-bg rounded-2xl p-2">
+          <nav className="w-full max-w-xs flex flex-col gap-1 mt-4 bg-brand-ink rounded-2xl p-2 border border-white/10">
             {[
               { label: "Home", icon: Home, href: "#top", isRoute: false },
               { label: "About", icon: User, href: "/about", isRoute: true },
@@ -123,7 +123,7 @@ function Index() {
                 <Link
                   key={label}
                   to={href}
-                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-brand-ink/80 hover:bg-brand-muted hover:text-brand-ink transition-colors text-sm font-medium"
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-white/80 hover:bg-white/10 hover:text-white transition-colors text-sm font-medium"
                 >
                   <Icon className="w-4 h-4" />
                   {label}
@@ -132,7 +132,7 @@ function Index() {
                 <a
                   key={label}
                   href={href}
-                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-brand-ink/80 hover:bg-brand-muted hover:text-brand-ink transition-colors text-sm font-medium"
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-white/80 hover:bg-white/10 hover:text-white transition-colors text-sm font-medium"
                 >
                   <Icon className="w-4 h-4" />
                   {label}
