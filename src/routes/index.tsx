@@ -116,7 +116,7 @@ function Index() {
               { label: "Home", icon: Home, href: "#top", isRoute: false },
               { label: "About", icon: User, href: "/about", isRoute: true },
               { label: "Projects", icon: LayoutGrid, href: "#work", isRoute: false },
-              { label: "Stack", icon: Layers, href: "#stack", isRoute: false },
+              { label: "Stack", icon: Layers, href: "/stack", isRoute: true },
               { label: "Contact", icon: Mail, href: "#contact", isRoute: false },
             ].map(({ label, icon: Icon, href, isRoute }) =>
               isRoute ? (
