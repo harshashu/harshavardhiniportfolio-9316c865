@@ -114,7 +114,7 @@ function Index() {
           <nav className="w-full max-w-xs flex flex-col gap-1 mt-4 bg-brand-bg rounded-2xl p-2">
             {[
               { label: "Home", icon: Home, href: "#top" },
-              { label: "About", icon: User, href: "#about" },
+              { label: "About", icon: User, href: "/about" },
               { label: "Projects", icon: LayoutGrid, href: "#work" },
               { label: "Stack", icon: Layers, href: "#stack" },
               { label: "Contact", icon: Mail, href: "#contact" },
