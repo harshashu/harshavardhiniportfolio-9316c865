@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight, Instagram, Linkedin, Dribbble, Home, User, LayoutGrid, Layers, Mail } from "lucide-react";
 import portrait from "@/assets/portrait.jpg";
 import project2 from "@/assets/project-2.jpg";
@@ -42,7 +42,7 @@ function Index() {
       <nav className="px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
         <a href="#top" className="font-display text-xl tracking-tight">HARSHA<span className="text-brand-accent">.</span></a>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium">
-          <a href="#about" className="hover:text-brand-accent transition-colors">About</a>
+          <Link to="/about" className="hover:text-brand-accent transition-colors">About</Link>
           <a href="#work" className="hover:text-brand-accent transition-colors">Work</a>
           <a href="#contact" className="hover:text-brand-accent transition-colors">Contact</a>
         </div>
@@ -113,21 +113,32 @@ function Index() {
           </div>
           <nav className="w-full max-w-xs flex flex-col gap-1 mt-4 bg-brand-bg rounded-2xl p-2">
             {[
-              { label: "Home", icon: Home, href: "#top" },
-              { label: "About", icon: User, href: "#about" },
-              { label: "Projects", icon: LayoutGrid, href: "#work" },
-              { label: "Stack", icon: Layers, href: "#stack" },
-              { label: "Contact", icon: Mail, href: "#contact" },
-            ].map(({ label, icon: Icon, href }) => (
-              <a
-                key={label}
-                href={href}
-                className="flex items-center gap-3 px-4 py-3 rounded-xl text-brand-ink/80 hover:bg-brand-muted hover:text-brand-ink transition-colors text-sm font-medium"
-              >
-                <Icon className="w-4 h-4" />
-                {label}
-              </a>
-            ))}
+              { label: "Home", icon: Home, href: "#top", isRoute: false },
+              { label: "About", icon: User, href: "/about", isRoute: true },
+              { label: "Projects", icon: LayoutGrid, href: "#work", isRoute: false },
+              { label: "Stack", icon: Layers, href: "#stack", isRoute: false },
+              { label: "Contact", icon: Mail, href: "#contact", isRoute: false },
+            ].map(({ label, icon: Icon, href, isRoute }) =>
+              isRoute ? (
+                <Link
+                  key={label}
+                  to={href}
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-brand-ink/80 hover:bg-brand-muted hover:text-brand-ink transition-colors text-sm font-medium"
+                >
+                  <Icon className="w-4 h-4" />
+                  {label}
+                </Link>
+              ) : (
+                <a
+                  key={label}
+                  href={href}
+                  className="flex items-center gap-3 px-4 py-3 rounded-xl text-brand-ink/80 hover:bg-brand-muted hover:text-brand-ink transition-colors text-sm font-medium"
+                >
+                  <Icon className="w-4 h-4" />
+                  {label}
+                </a>
+              )
+            )}
           </nav>
         </div>
       </header>
