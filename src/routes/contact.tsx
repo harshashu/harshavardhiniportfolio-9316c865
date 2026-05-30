@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Mail, Phone, Linkedin, Instagram, MessageCircle } from "lucide-react";
 import { useState } from "react";
+import portrait from "@/assets/portrait.jpg";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -27,7 +28,8 @@ function ContactPage() {
   return (
     <div className="min-h-screen bg-black text-white font-body">
       <nav className="px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
-        <Link to="/" className="font-display text-xl tracking-tight">
+        <Link to="/" className="flex items-center gap-2 font-display text-xl tracking-tight">
+          <img src={portrait} alt="" className="w-7 h-7 rounded-full object-cover" />
           HARSHA<span className="text-emerald-400">.</span>
         </Link>
         <Link
@@ -99,7 +101,12 @@ function ContactPage() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="flex items-center gap-3 text-white/80 hover:text-emerald-400 transition-colors">
+                  <a
+                    href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Call+with+Harsha+Vardhini&add=harshavardhaniboodu@gmail.com&details=Booking+a+call+via+portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-white/80 hover:text-emerald-400 transition-colors"
+                  >
                     <Phone className="w-4 h-4" />
                     Book a Call
                   </a>
