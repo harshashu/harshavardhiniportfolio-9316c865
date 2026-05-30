@@ -44,14 +44,14 @@ function Index() {
         <div className="hidden md:flex items-center gap-10 text-sm font-medium">
           <Link to="/about" className="hover:text-brand-accent transition-colors">About</Link>
           <a href="#work" className="hover:text-brand-accent transition-colors">Work</a>
-          <a href="#contact" className="hover:text-brand-accent transition-colors">Contact</a>
+          <Link to="/contact" className="hover:text-brand-accent transition-colors">Contact</Link>
         </div>
-        <a
-          href="#contact"
+        <Link
+          to="/contact"
           className="inline-flex items-center gap-1.5 bg-brand-ink text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-brand-accent transition-colors"
         >
           Hire Me <ArrowUpRight className="w-4 h-4" />
-        </a>
+        </Link>
       </nav>
 
       {/* Hero */}
