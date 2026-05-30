@@ -81,12 +81,12 @@ function Index() {
             >
               Download Resume
             </a>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 border border-brand-ink/30 px-7 py-3.5 rounded-full text-sm font-medium hover:bg-brand-muted transition-colors"
             >
               Let's Build Something
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -117,7 +117,7 @@ function Index() {
               { label: "About", icon: User, href: "/about", isRoute: true },
               { label: "Projects", icon: LayoutGrid, href: "#work", isRoute: false },
               { label: "Stack", icon: Layers, href: "/stack", isRoute: true },
-              { label: "Contact", icon: Mail, href: "#contact", isRoute: false },
+              { label: "Contact", icon: Mail, href: "/contact", isRoute: true },
             ].map(({ label, icon: Icon, href, isRoute }) =>
               isRoute ? (
                 <Link
