@@ -64,7 +64,7 @@ function AboutPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Calendar className="w-4 h-4 text-brand-accent" />
-                <span>2022 — 2026</span>
+                <span>2019 — 2023</span>
               </div>
             </div>
           </div>
