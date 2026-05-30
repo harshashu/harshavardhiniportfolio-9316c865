@@ -44,14 +44,14 @@ function Index() {
         <div className="hidden md:flex items-center gap-10 text-sm font-medium">
           <Link to="/about" className="hover:text-brand-accent transition-colors">About</Link>
           <a href="#work" className="hover:text-brand-accent transition-colors">Work</a>
-          <a href="#contact" className="hover:text-brand-accent transition-colors">Contact</a>
+          <Link to="/contact" className="hover:text-brand-accent transition-colors">Contact</Link>
         </div>
-        <a
-          href="#contact"
+        <Link
+          to="/contact"
           className="inline-flex items-center gap-1.5 bg-brand-ink text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-brand-accent transition-colors"
         >
           Hire Me <ArrowUpRight className="w-4 h-4" />
-        </a>
+        </Link>
       </nav>
 
       {/* Hero */}
@@ -81,12 +81,12 @@ function Index() {
             >
               Download Resume
             </a>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 border border-brand-ink/30 px-7 py-3.5 rounded-full text-sm font-medium hover:bg-brand-muted transition-colors"
             >
               Let's Build Something
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -117,7 +117,7 @@ function Index() {
               { label: "About", icon: User, href: "/about", isRoute: true },
               { label: "Projects", icon: LayoutGrid, href: "#work", isRoute: false },
               { label: "Stack", icon: Layers, href: "/stack", isRoute: true },
-              { label: "Contact", icon: Mail, href: "#contact", isRoute: false },
+              { label: "Contact", icon: Mail, href: "/contact", isRoute: true },
             ].map(({ label, icon: Icon, href, isRoute }) =>
               isRoute ? (
                 <Link
@@ -153,35 +153,6 @@ function Index() {
             </div>
           ))}
         </div>
-      </section>
-
-      {/* About */}
-      <section id="about" className="px-6 md:px-12 py-28 max-w-7xl mx-auto">
-        <div className="text-xs font-bold uppercase tracking-widest text-brand-accent mb-4">(01) About Me</div>
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <h2 className="font-display text-4xl md:text-6xl uppercase tracking-tight leading-[0.95]">
-            Get to <br />
-            <span className="text-brand-accent">Know Me</span>
-          </h2>
-          <div className="space-y-5 text-brand-ink/80 leading-relaxed">
-            <p>
-              I'm Harsha Vardhini, a creative and detail-oriented UI/UX Designer passionate about crafting intuitive, visually engaging, and user-centered digital experiences. I specialize in transforming ideas into seamless and functional interfaces through design thinking, usability principles, and problem-solving.
-            </p>
-            <p>
-              Skilled in designing modern, accessible, and aesthetically balanced user interfaces, I focus on creating meaningful digital products that enhance user experiences. I conduct user research and apply insights to design human-centered solutions that align with both user needs and business goals.
-            </p>
-            <p>
-              I develop wireframes, prototypes, and scalable design systems to ensure consistency and efficiency across digital platforms. I enjoy collaborating with cross-functional teams to translate concepts into seamless, engaging, and impactful user journeys.
-            </p>
-            <p>
-              Alongside UI/UX design, I leverage AI-powered tools, prompt design, and AI-assisted workflows to improve ideation, prototyping, and content generation. I also work with modern platforms such as Figma, Framer AI, Webflow, Cursor AI, and Lovable to design and build responsive, high-quality digital experiences.
-            </p>
-            <p>
-              Passionate about innovation and continuous learning, I stay updated with emerging design trends, technologies, and tools to deliver modern and user-friendly solutions. Seeking opportunities to contribute creativity, collaboration, and strong communication skills while growing professionally in the field of UI/UX design.
-            </p>
-          </div>
-        </div>
-
       </section>
 
       {/* Work */}
