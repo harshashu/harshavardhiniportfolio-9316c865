@@ -40,7 +40,10 @@ function Index() {
     <div className="bg-brand-bg text-brand-ink font-body selection:bg-brand-accent selection:text-white overflow-x-hidden">
       {/* Nav */}
       <nav className="px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
-        <a href="#top" className="font-display text-xl tracking-tight">HARSHA<span className="text-brand-accent">.</span></a>
+        <a href="#top" className="flex items-center gap-2 font-display text-xl tracking-tight">
+          <img src={portrait} alt="" className="w-7 h-7 rounded-full object-cover" />
+          HARSHA<span className="text-brand-accent">.</span>
+        </a>
         <div className="hidden md:flex items-center gap-10 text-sm font-medium">
           <Link to="/about" className="hover:text-brand-accent transition-colors">About</Link>
           <a href="#work" className="hover:text-brand-accent transition-colors">Work</a>
