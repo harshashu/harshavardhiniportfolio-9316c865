@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowLeft, GraduationCap, Calendar, MapPin } from "lucide-react";
+import portrait from "@/assets/portrait.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -18,7 +19,10 @@ function AboutPage() {
     <div className="bg-brand-bg text-brand-ink font-body selection:bg-brand-accent selection:text-white min-h-screen">
       {/* Nav */}
       <nav className="px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
-        <a href="/" className="font-display text-xl tracking-tight">HARSHA<span className="text-brand-accent">.</span></a>
+        <a href="/" className="flex items-center gap-2 font-display text-xl tracking-tight">
+          <img src={portrait} alt="" className="w-7 h-7 rounded-full object-cover" />
+          HARSHA<span className="text-brand-accent">.</span>
+        </a>
         <a
           href="/"
           className="inline-flex items-center gap-2 bg-brand-ink text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-brand-accent transition-colors"
