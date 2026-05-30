@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Figma, Code, Brain, Wand2, Palette, Layers, Monitor, Smartphone, Layout, Lightbulb, FileCode, Paintbrush } from "lucide-react";
+import portrait from "@/assets/portrait.jpg";
 
 export const Route = createFileRoute("/stack")({
   head: () => ({
@@ -19,7 +20,7 @@ function StackPage() {
       {/* Nav */}
       <nav className="px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
         <a href="/" className="flex items-center gap-2 font-display text-xl tracking-tight">
-          <img src="/src/assets/portrait.jpg" alt="" className="w-7 h-7 rounded-full object-cover" />
+          <img src={portrait} alt="" className="w-7 h-7 rounded-full object-cover" />
           HARSHA<span className="text-brand-accent">.</span>
         </a>
         <Link
