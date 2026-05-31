@@ -5,9 +5,7 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import sosCover from "@/assets/project-sos-cover.png";
-import sosDetail from "@/assets/project-sos-detail.jpeg";
 import lumenCover from "@/assets/lumen-cover.png";
-import lumenDetail from "@/assets/lumen-detail.png";
 import avinyaCover from "@/assets/avinya-cover.png";
 import smartTask from "@/assets/smart-task.png";
 
@@ -29,10 +27,10 @@ const skills = [
 const stats = [];
 
 const projects = [
-  { title: "SOS APP DESIGN", tag: "UX Case Study · Mobile · 2025", image: sosCover, href: sosDetail },
-  { title: "CREAMY ICE POSTER", tag: "Poster · Branding · 2025", image: lumenCover, href: lumenDetail },
-  { title: "AVINYA INTERIORS", tag: "Interior Design · Branding · 2024", image: avinyaCover, href: "https://avinya-interiors.vercel.app/" },
-  { title: "SMART TASK MANAGER", tag: "Web App · Productivity · 2024", image: smartTask, href: "https://smart-task-manger.vercel.app/" },
+  { title: "SOS APP DESIGN", tag: "UX Case Study · Mobile · 2025", image: sosCover, slug: "sos-app" },
+  { title: "CREAMY ICE POSTER", tag: "Poster · Branding · 2025", image: lumenCover, slug: "creamy-ice-poster" },
+  { title: "AVINYA INTERIORS", tag: "Interior Design · Branding · 2024", image: avinyaCover, slug: "avinya-interiors" },
+  { title: "SMART TASK MANAGER", tag: "Web App · Productivity · 2024", image: smartTask, slug: "smart-task-manager" },
 ];
 
 function Index() {
@@ -196,12 +194,10 @@ function Index() {
                 </div>
               </article>
             );
-            return p.href ? (
-              <a key={p.title} href={p.href} target="_blank" rel="noopener noreferrer" className="block">
+            return (
+              <Link key={p.title} to="/projects/$slug" params={{ slug: p.slug }} className="block">
                 {Card}
-              </a>
-            ) : (
-              <div key={p.title}>{Card}</div>
+              </Link>
             );
           })}
         </div>
