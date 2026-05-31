@@ -5,9 +5,7 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
 import sosCover from "@/assets/project-sos-cover.png";
-import sosDetail from "@/assets/project-sos-detail.jpeg";
 import lumenCover from "@/assets/lumen-cover.png";
-import lumenDetail from "@/assets/lumen-detail.png";
 import avinyaCover from "@/assets/avinya-cover.png";
 import smartTask from "@/assets/smart-task.png";
 
