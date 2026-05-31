@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowLeft, Wand2, Layers, Monitor, Smartphone, Layout, Lightbulb, FileCode, Paintbrush } from "lucide-react";
-import { SiFramer, SiFigma, SiAdobe, SiCanva, SiHtml5, SiOpenai } from "react-icons/si";
+import { SiFramer, SiFigma, SiCanva, SiHtml5, SiOpenai } from "react-icons/si";
 import portrait from "@/assets/portrait.jpg";
 
 export const Route = createFileRoute("/stack")({
