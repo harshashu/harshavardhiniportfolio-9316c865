@@ -26,15 +26,15 @@ function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white font-body">
+    <div className="min-h-screen bg-brand-bg text-brand-ink font-body">
       <nav className="px-6 md:px-12 py-6 flex justify-between items-center max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-2 font-display text-xl tracking-tight">
           <img src={portrait} alt="" className="w-7 h-7 rounded-full object-cover" />
-          HARSHA<span className="text-emerald-400">.</span>
+          HARSHA<span className="text-brand-accent">.</span>
         </Link>
         <Link
           to="/"
-          className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-full text-sm font-medium transition-colors"
+          className="inline-flex items-center gap-2 border border-brand-ink/20 hover:bg-brand-muted text-brand-ink px-5 py-2.5 rounded-full text-sm font-medium transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Back Home
@@ -59,7 +59,7 @@ function ContactPage() {
                   placeholder="Name"
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-emerald-400 transition-colors"
+                  className="bg-white border border-brand-ink/15 rounded-2xl px-5 py-4 text-brand-ink placeholder-brand-ink/40 focus:outline-none focus:border-brand-accent transition-colors"
                 />
                 <input
                   type="email"
@@ -68,7 +68,7 @@ function ContactPage() {
                   placeholder="Email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
-                  className="bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-emerald-400 transition-colors"
+                  className="bg-white border border-brand-ink/15 rounded-2xl px-5 py-4 text-brand-ink placeholder-brand-ink/40 focus:outline-none focus:border-brand-accent transition-colors"
                 />
               </div>
               <textarea
@@ -78,11 +78,11 @@ function ContactPage() {
                 placeholder="Write a message..."
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
-                className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 text-white placeholder-white/40 focus:outline-none focus:border-emerald-400 transition-colors resize-none"
+                className="w-full bg-white border border-brand-ink/15 rounded-2xl px-5 py-4 text-brand-ink placeholder-brand-ink/40 focus:outline-none focus:border-brand-accent transition-colors resize-none"
               />
               <button
                 type="submit"
-                className="w-full bg-emerald-400 hover:bg-emerald-300 text-black font-semibold py-4 rounded-2xl transition-colors"
+                className="w-full bg-brand-ink hover:bg-brand-accent text-white font-semibold py-4 rounded-2xl transition-colors"
               >
                 Send Message
               </button>
@@ -95,7 +95,7 @@ function ContactPage() {
               <h2 className="text-2xl font-semibold mb-6">Contact</h2>
               <ul className="space-y-4">
                 <li>
-                  <a href="mailto:harshavardhaniboodu@gmail.com" className="flex items-center gap-3 text-white/80 hover:text-emerald-400 transition-colors">
+                  <a href="mailto:harshavardhaniboodu@gmail.com" className="flex items-center gap-3 text-brand-ink/75 hover:text-brand-accent transition-colors">
                     <Mail className="w-4 h-4" />
                     harshavardhaniboodu@gmail.com
                   </a>
@@ -105,7 +105,7 @@ function ContactPage() {
                     href="https://calendar.google.com/calendar/u/0/r/eventedit?text=Call+with+Harsha+Vardhini&add=harshavardhaniboodu@gmail.com&details=Booking+a+call+via+portfolio"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 text-white/80 hover:text-emerald-400 transition-colors"
+                    className="flex items-center gap-3 text-brand-ink/75 hover:text-brand-accent transition-colors"
                   >
                     <Phone className="w-4 h-4" />
                     Book a Call
@@ -118,25 +118,25 @@ function ContactPage() {
               <h2 className="text-2xl font-semibold mb-6">Social Media</h2>
               <ul className="space-y-4">
                 <li>
-                  <a href="https://www.linkedin.com/in/harshavardhiniboddu/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-white/80 hover:text-emerald-400 transition-colors">
+                  <a href="https://www.linkedin.com/in/harshavardhiniboddu/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-brand-ink/75 hover:text-brand-accent transition-colors">
                     <Linkedin className="w-4 h-4" />
                     LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="flex items-center gap-3 text-white/80 hover:text-emerald-400 transition-colors">
+                  <a href="#" className="flex items-center gap-3 text-brand-ink/75 hover:text-brand-accent transition-colors">
                     <span className="w-4 h-4 inline-flex items-center justify-center text-xs font-bold">Be</span>
                     Behance
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="flex items-center gap-3 text-white/80 hover:text-emerald-400 transition-colors">
+                  <a href="#" className="flex items-center gap-3 text-brand-ink/75 hover:text-brand-accent transition-colors">
                     <Instagram className="w-4 h-4" />
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="flex items-center gap-3 text-white/80 hover:text-emerald-400 transition-colors">
+                  <a href="#" className="flex items-center gap-3 text-brand-ink/75 hover:text-brand-accent transition-colors">
                     <MessageCircle className="w-4 h-4" />
                     Whatsapp
                   </a>
