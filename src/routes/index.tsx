@@ -8,6 +8,7 @@ import sosCover from "@/assets/project-sos-cover.png";
 import lumenCover from "@/assets/lumen-cover.png";
 import avinyaCover from "@/assets/avinya-cover.png";
 import smartTask from "@/assets/smart-task.png";
+import resumeAsset from "@/assets/resume.pdf.asset.json";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -76,11 +77,12 @@ function Index() {
               View My Work <ArrowUpRight className="w-4 h-4" />
             </a>
             <a
-              href="/resume.pdf"
-              download
+              href={resumeAsset.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-brand-accent text-white px-7 py-3.5 rounded-full text-sm font-medium hover:bg-brand-ink transition-colors"
             >
-              Download Resume
+              View Resume
             </a>
             <Link
               to="/contact"
